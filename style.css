@@ -1,0 +1,91 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.shell {
+    width: 80px;
+    height: 700px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(28, 6, 38);
+    border-radius: 30px;
+    transition: all 0.3s ease;
+    overflow: hidden;
+    padding: 20px 0;
+}
+
+.box {
+    display: flex;
+    align-items: center;
+    width: 85%;
+    height: 60px;
+    margin: 8px 0;
+    padding: 0 20px;
+    border-radius: 8px;
+    color: rgb(250, 231, 255);
+    transition: 0.3s ease;
+    position: relative;
+    text-decoration: none;
+    gap: 15px;
+}
+
+.box i {
+    font-size: 26px;
+    min-width: 24px;
+    transition: transform 0.3s ease;
+}
+
+.box:nth-child(2)::before,
+.box:nth-child(6)::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 70%; 
+    height: 2px;
+    background: rgba(200, 153, 244, 0.3);
+    top: -10px;
+}
+
+.box span {
+    font-size: 16px;
+    font-weight: 500;
+    white-space: nowrap;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+    margin-left: 30px;
+    line-height: 60px;
+}
+
+.box:hover {
+    background-color: rgb(113, 47, 152);
+    color: #fff;
+}
+
+
+.shell:hover {
+    width: 250px;
+}
+
+.shell:hover .box span {
+    opacity: 1;
+}
+
+.divider {
+    width: 70%;
+    height: 1px;
+    background-color: rgba(200, 153, 244, 0.5);
+    margin: 15px 0;
+}
